@@ -54,7 +54,7 @@ def main():
     clock = pg.time.Clock()
     enn = pg.Surface((20, 20))
     pg.draw.circle(enn, (255, 0, 0), (10, 10), 10)
-    enn.set_colorkey((0, 0, 0))
+    enn.set_colorkey((0, 0, 0))#黒をすかす
     tmr = 0
     img_rct=(enn.get_rect())
     x=random.randint(0,WIDTH)
