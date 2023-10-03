@@ -21,6 +21,7 @@ def main():
     x=random.randint(0,WIDTH)
     y=random.randint(0,HEIGHT)
     img_rct.center=(x,y)
+    vx,vy=5,5
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: 
@@ -28,6 +29,7 @@ def main():
 
         screen.blit(bg_img, [0, 0])
         screen.blit(kk_img, [900, 400])
+        img_rct.move_ip(vx,vy)
         screen.blit(enn,img_rct)
         pg.display.update()
         tmr += 1
