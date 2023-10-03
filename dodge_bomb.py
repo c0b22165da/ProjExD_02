@@ -49,7 +49,6 @@ def main():
              (0,5):kk_img_sita,
              (5,5):kk_img_migisita,
              (0,0):kk_img_shoumen}
-
     kk_rct=kk_img.get_rect()
     kk_rct.center=(900,400)
     clock = pg.time.Clock()
@@ -62,6 +61,8 @@ def main():
     y=random.randint(0,HEIGHT)
     img_rct.center=(x,y)
     vx,vy=5,5
+    
+
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: 
