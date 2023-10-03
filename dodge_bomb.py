@@ -10,8 +10,6 @@ idou={pg.K_UP:(0,-5),
       pg.K_DOWN:(0,5)}
 
 
-
-
 def check_idou(x):
     yoko=True
     tate=True
@@ -22,7 +20,9 @@ def check_idou(x):
 
     return yoko,tate
 
+
 accs=[a for a in range(1,11)]
+
 
 def main():
     pg.display.set_caption("逃げろ！こうかとん")
@@ -61,7 +61,7 @@ def main():
     y=random.randint(0,HEIGHT)
     img_rct.center=(x,y)
     vx,vy=5,5
-    
+    font = pg.font.Font(None, 80)
 
     while True:
         for event in pg.event.get():
@@ -94,6 +94,8 @@ def main():
         if not tate:
             vy*=-1
         screen.blit(enn,img_rct)
+        txt = font.render(str(tmr//30), True, (255, 255, 255))
+        screen.blit(txt, [1400, 800])
         pg.display.update()
         tmr += 1
         clock.tick(30)
